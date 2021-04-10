@@ -4,6 +4,8 @@ import org.testng.annotations.*;
 
 import java.io.IOException;
 
+import static java.lang.Thread.sleep;
+
 public class TestngExample {
 
     @BeforeSuite(alwaysRun = true)
@@ -26,7 +28,7 @@ public class TestngExample {
         System.out.println("I am setUpBeforeMethod");
     }
 
-    @Test(groups = "TestngExample", priority = 1)
+    @Test(groups = "TestngExample", priority = 1, expectedExceptions = {IOException.class})
     public void test1() throws IOException {
         System.out.println("I am test1");
 //        throw new IOException();
@@ -37,8 +39,9 @@ public class TestngExample {
         System.out.println("I am test2");
     }
 
-    @Test(groups = "TestngExample", priority = 3)
-    public void test3() {
+    @Test(groups = "TestngExample", priority = 3, invocationCount = 30, invocationTimeOut = 2000)
+    public void test3() throws InterruptedException {
+        sleep(1000);
         System.out.println("I am test3");
     }
 
