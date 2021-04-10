@@ -1,4 +1,4 @@
-package tests;
+package tests.other;
 
 public class LoopExample {
     public static void main(String[] args) {

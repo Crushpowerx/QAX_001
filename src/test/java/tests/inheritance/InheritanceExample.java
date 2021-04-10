@@ -1,7 +1,8 @@
-package tests;
+package tests.inheritance;
 
 import modificators_example.ModificatorsExample;
 import org.junit.jupiter.api.Test;
+import tests.arrays.ArrayExampleTest;
 import utils.ArrayUtils;
 
 public class InheritanceExample extends ModificatorsExample {

@@ -1,4 +1,4 @@
-package tests;
+package tests.abstracts;
 
 abstract class AbstractClassExample {
 

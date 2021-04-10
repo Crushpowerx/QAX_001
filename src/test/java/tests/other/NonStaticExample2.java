@@ -1,6 +1,6 @@
-package tests;
+package tests.other;
 
-import static tests.NonStaticExample.getSumStatic;
+import static tests.other.NonStaticExample.getSumStatic;
 
 public class NonStaticExample2 {
 

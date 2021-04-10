@@ -1,4 +1,4 @@
-package tests;
+package tests.interfaces;
 
 public interface InterfaceExample {
     int var3 = 2;

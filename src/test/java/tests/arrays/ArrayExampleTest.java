@@ -1,4 +1,4 @@
-package tests;
+package tests.arrays;
 
 import org.junit.jupiter.api.Test;
 import utils.ArrayUtils;

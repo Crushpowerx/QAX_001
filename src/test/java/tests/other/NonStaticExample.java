@@ -1,4 +1,4 @@
-package tests;
+package tests.other;
 
 public class NonStaticExample {
     public int getSumNonStatic(int var1, int var2) {
