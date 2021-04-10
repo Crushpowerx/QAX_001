@@ -1,6 +1,6 @@
 package tests.interfaces;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class InterfaceExampleTest implements InterfaceExample {
     int var4 = 4;

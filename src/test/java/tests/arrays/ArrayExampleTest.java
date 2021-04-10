@@ -1,6 +1,6 @@
 package tests.arrays;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import utils.ArrayUtils;
 
 public class ArrayExampleTest extends ArrayUtils {

@@ -1,6 +1,6 @@
 package tests.other;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import modificators_example.ModificatorsExample;
 
 public class ModificatorsExampleTest extends ModificatorsExample {

@@ -1,6 +1,6 @@
 package tests.abstracts;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class AbstractClassExampleTest extends AbstractClassExample {
 
