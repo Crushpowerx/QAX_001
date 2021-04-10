@@ -39,6 +39,9 @@ public class TestngExample {
     public void test2() {
         System.out.println("I am test2");
         Assert.assertEquals(2, 2);
+        if (2 != 2) {
+            Assert.fail("O, no!!! 2 != 2");
+        }
     }
 
     @Test(groups = "TestngExample", priority = 3, invocationCount = 30, invocationTimeOut = 2000)
