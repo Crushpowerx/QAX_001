@@ -3,7 +3,6 @@ package tests.arrays;
 import java.util.Arrays;
 
 public class ArrayExample2 {
-
     public static void main(String[] args) {
         String[][] arrayString2 = new String[2][2];
         arrayString2[0][0] = "value 0";
