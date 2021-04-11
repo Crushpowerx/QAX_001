@@ -16,6 +16,8 @@ public class FactoryAnnotation {
         factoryTest[3] = new FactorySimpleTest2("NO");
         return factoryTest;
 
+
+
     }
 
 }
