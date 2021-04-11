@@ -9,6 +9,7 @@ public class ArrayUtils {
     public void fillArray(String[] arrayString, String value) {
         for (int i = 0; i < arrayString.length; i++) {
             arrayString[i] = value + i;
+
         }
     }
 
