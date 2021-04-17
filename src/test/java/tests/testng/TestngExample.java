@@ -19,6 +19,19 @@ public class TestngExample {
         System.out.println("I am setUpBeforeTest");
     }
 
+    //TODO аннотации BeforeGroups и AfterGroups начиная с версии TestNG 7.1.0 и выше работают только при запуске через
+    // xml файл с обязательным указанием какие группы должны быть включены в фильтр
+
+    @BeforeGroups("TestngExample")
+    public void setUpBeforeGroups() {
+        System.out.println("I am setUpBeforeGroups TestngExample");
+    }
+
+    @BeforeGroups("urlValidation")
+    public void setUpBeforeGroups2() {
+        System.out.println("I am setUpBeforeGroups urlValidation");
+    }
+
     @BeforeClass(alwaysRun = true)
     public void setUpBeforeClass() {
         System.out.println("I am setUpBeforeClass");
@@ -44,7 +57,7 @@ public class TestngExample {
         }
     }
 
-    @Test(groups = "TestngExample", priority = 3, invocationCount = 30, invocationTimeOut = 2000)
+    @Test(groups = "TestngExample", priority = 3)
     public void test3() throws InterruptedException {
         sleep(1000);
         System.out.println("I am test3");
@@ -85,26 +98,14 @@ public class TestngExample {
         System.out.println("I am setUpAfterMethod");
     }
 
-    //TODO разобраться почему не работает!!!
-
-    @BeforeGroups(groups = "TestngExample", alwaysRun = true)
-    public void setUpBeforeGroups() {
-        System.out.println("I am setUpBeforeGroups");
-    }
-
-    @BeforeGroups("urlValidation")
-    public void setUpBeforeGroups2() {
-        System.out.println("I am setUpBeforeGroups");
-    }
-
-    @AfterGroups(groups = "TestngExample", alwaysRun = true)
+    @AfterGroups("TestngExample")
     public void setUpAfterGroups() {
-        System.out.println("I am setUpAfterGroups");
+        System.out.println("I am setUpAfterGroups TestngExample");
     }
 
     @AfterGroups("urlValidation")
     public void setUpAfterGroups2() {
-        System.out.println("I am setUpAfterGroups2");
+        System.out.println("I am setUpAfterGroups urlValidation");
     }
 
 }
