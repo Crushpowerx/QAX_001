@@ -42,12 +42,6 @@ public class TestngExample {
         System.out.println("I am setUpBeforeMethod");
     }
 
-    @Test(groups = "TestngExample", priority = 1, expectedExceptions = {IOException.class})
-    public void test1() throws IOException {
-        System.out.println("I am test1");
-        throw new IOException();
-    }
-
     @Test(groups = "TestngExample", priority = 2, dependsOnMethods = "test1")
     public void test2() {
         System.out.println("I am test2");
