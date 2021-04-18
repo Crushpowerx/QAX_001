@@ -27,3 +27,4 @@ target/
 build/
 *.iml
 /.DS_Store
+/allure-results/
