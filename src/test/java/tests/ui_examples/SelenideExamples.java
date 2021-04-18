@@ -3,19 +3,20 @@ package tests.ui_examples;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;
+import runner.Debug;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SelenideExamples {
+public class SelenideExamples extends Debug {
 
     @Test
     public void test1() {
         openPage("https://www.google.com/");
         fillTheFieldSearch("XPath Helper");
         clickButtonSearch();
-        checkForResult("XPath Helper");
+        checkForResult("XPath Helper222");
     }
 
     @Step
