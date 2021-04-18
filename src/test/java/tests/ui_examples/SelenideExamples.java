@@ -1,6 +1,7 @@
 package tests.ui_examples;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selectors.byXpath;
@@ -11,10 +12,30 @@ public class SelenideExamples {
 
     @Test
     public void test1() {
-        open("https://www.google.com/");
-        $(byXpath("//input[@title='Поиск']")).sendKeys("xpath helper");
+        openPage("https://www.google.com/");
+        fillTheFieldSearch("XPath Helper");
+        clickButtonSearch();
+        checkForResult("XPath Helper");
+    }
+
+    @Step
+    public void openPage(String url) {
+        open(url);
+    }
+
+    @Step
+    public void fillTheFieldSearch(String value) {
+        $(byXpath("//input[@title='Поиск']")).sendKeys(value);
+    }
+
+    @Step
+    public void clickButtonSearch() {
         $(byXpath("//div[@class='tfB0Bf']//input[@value='Поиск в Google']")).click();
-        $(byXpath("//h3[text()='XPath Helper']")).shouldBe(Condition.visible);
+    }
+
+    @Step
+    public void checkForResult(String value) {
+        $(byXpath("//h3[text()='" + value + "']")).shouldBe(Condition.visible);
     }
 
 }
