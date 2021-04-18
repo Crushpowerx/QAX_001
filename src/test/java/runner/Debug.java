@@ -11,6 +11,7 @@ public class Debug {
     public void setUp() {
         Configuration.timeout = 5000;
         Configuration.reportsFolder = "target/screenshots";
+        Configuration.downloadsFolder = "target/build/downloads";
         Configuration.browser = "chrome";
         Configuration.browserVersion = "90";
         Configuration.startMaximized = true;
