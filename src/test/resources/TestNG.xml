@@ -8,7 +8,7 @@
     </groups>
     <test name="IT Department">
         <classes>
-            <class name="tests.testng.TestngExample"/>
+            <class name="tests.other_examples.testng.TestngExample"/>
         </classes>
     </test>
 </suite>
