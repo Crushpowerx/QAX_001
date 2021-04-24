@@ -1,8 +1,7 @@
 package data;
 
 public enum ProjectUrls {
-    GOOGLE_MAIN_PAGE("https://www.google.com/"),
-    WIKIPEDIA_MAIN_PAGE("");
+    GOOGLE_MAIN_PAGE("https://www.google.com/");
 
     private final String url;
 

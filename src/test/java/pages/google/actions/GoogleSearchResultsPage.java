@@ -11,7 +11,7 @@ public class GoogleSearchResultsPage extends GoogleSearchResultsLocators {
 
     @Step("Check for result")
     public void checkForResult(String value) {
-        $(byXpath(prepareXPathSearchResult + "'" + value + "']")).shouldBe(Condition.visible);
+        $(byXpath(prepareXPathSearchResult + "'" + value + "')]")).shouldBe(Condition.visible);
     }
 
 }
