@@ -7,7 +7,6 @@ public class FactoryAnnotation {
 
     @Factory()
     @Test
-
     public Object[] getTestFactoryMethod() {
         Object[] factoryTest = new Object[4];
         factoryTest[0] = new FactorySimplyTest1("CA");
@@ -15,10 +14,6 @@ public class FactoryAnnotation {
         factoryTest[2] = new FactorySimpleTest2("FI");
         factoryTest[3] = new FactorySimpleTest2("NO");
         return factoryTest;
-
-
-
-
     }
 
 }

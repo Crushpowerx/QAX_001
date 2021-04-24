@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Google search 2">
+    <parameter name="word" value="Hello world 2 !!!"/>
+    <test name="Check google search - DE 2">
+        <parameter name="country" value="DE 2"/>
+        <packages>
+            <package name="tests.ui_examples"/>
+        </packages>
+    </test>
+    <test name="Check google search - CA 2">
+        <parameter name="country" value="CA 2"/>
+        <packages>
+            <package name="tests.ui_examples"/>
+        </packages>
+    </test>
+</suite>

@@ -1,14 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="test_suite">
-    <groups>
-        <run>
-            <include name="TestngExample"/>
-            <include name="urlValidation"/>
-        </run>
-    </groups>
-    <test name="IT Department">
-        <classes>
-            <class name="tests.other_examples.testng.TestngExample"/>
-        </classes>
+<suite name="Google search">
+    <parameter name="word" value="Hello world!!!"/>
+    <test name="Check google search - DE">
+        <parameter name="country" value="DE"/>
+        <packages>
+            <package name="tests.ui_examples"/>
+        </packages>
+    </test>
+    <test name="Check google search - CA">
+        <parameter name="country" value="CA"/>
+        <packages>
+            <package name="tests.ui_examples"/>
+        </packages>
     </test>
 </suite>
