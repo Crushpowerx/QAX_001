@@ -25,7 +25,7 @@ public class SeleniumExample {
         if (Platform.isWindows()) {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         } else if (Platform.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver_mac.exe");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver_mac");
         } else if (Platform.isLinux()) {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
         }
