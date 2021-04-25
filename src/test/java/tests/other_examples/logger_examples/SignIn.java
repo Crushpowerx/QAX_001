@@ -1,6 +1,6 @@
 package tests.other_examples.logger_examples;
 
-import listener.CustomListener;
+import listeners.CustomListener;
 import logger.CustomLogger;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;

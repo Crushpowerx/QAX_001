@@ -1,4 +1,4 @@
-package listener;
+package listeners;
 
 import logger.CustomLogger;
 import org.testng.ITestListener;

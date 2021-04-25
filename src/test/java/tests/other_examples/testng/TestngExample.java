@@ -1,6 +1,6 @@
 package tests.other_examples.testng;
 
-import listener.CustomListener;
+import listeners.CustomListener;
 import org.testng.Assert;
 import org.testng.annotations.*;
 

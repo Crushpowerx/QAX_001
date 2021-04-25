@@ -3,10 +3,7 @@ package tests.ui_examples;
 import com.codeborne.selenide.Selenide;
 import data.GoogleSearchData;
 import data.ProjectUrls;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.google.BasePageGoogle;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -25,7 +22,7 @@ public class GoogleSearch extends BasePageGoogle {
     public void checkGoogleSearch1() {
         googleMainPage.fillFieldSearch(GoogleSearchData.GOOGLE_SEARCH_DATA_1.getValue());
         googleMainPage.clickButtonSearch();
-        googleSearchResultsPage.checkForResult(GoogleSearchData.GOOGLE_SEARCH_DATA_1.getValue());
+        googleSearchResultsPage.checkForResult(GoogleSearchData.GOOGLE_SEARCH_DATA_2.getValue());
     }
 
     @Test
