@@ -9,7 +9,7 @@ public class Debug {
 
     @BeforeMethod
     public void setUp() {
-        Configuration.timeout = 5000;
+        Configuration.timeout = 10000;
         Configuration.reportsFolder = "target/screenshots";
         Configuration.downloadsFolder = "target/build/downloads";
         Configuration.browser = "chrome";

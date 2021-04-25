@@ -12,5 +12,13 @@
         <packages>
             <package name="tests.ui_examples"/>
         </packages>
+        <classes>
+            <class name="tests.ui_examples.GoogleSearch">
+                <methods>
+                    <include name="checkGoogleSearch1"/>
+                    <exclude name="checkGoogleSearch2"/>
+                </methods>
+            </class>
+        </classes>
     </test>
 </suite>
