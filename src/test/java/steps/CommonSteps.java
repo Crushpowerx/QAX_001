@@ -94,17 +94,17 @@ public class CommonSteps {
 
     @Step
     public static void checkUrl(String mustContains, int timeOutSec) {
-        boolean conditionForUrl = false;
+        boolean testPassed = false;
         for (int i = 0; i < timeOutSec * 2; i++) {
             if (url().contains(mustContains)) {
-                conditionForUrl = true;
+                testPassed = true;
                 getAndAttachScreenshot();
                 break;
             } else {
                 sleep(500);
             }
         }
-        if (!conditionForUrl) {
+        if (!testPassed) {
             getAndAttachScreenshot();
             Assert.fail("Actual URL: " + url() + "\n" + "Expected URL: " + mustContains);
         }

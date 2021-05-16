@@ -23,4 +23,11 @@ public class Wikipedia extends BasePageWikipedia {
         checkUrl("https://" + languageCode.toLowerCase() + ".wikipedia.org/wiki/", 5);
     }
 
+    @Test
+    public void checkLangEng() {
+        open("https://www.wikipedia.org/");
+        mainPage.pressButtonWithLanguageEnglish();
+        checkUrl("https://en.wikipedia.org/wiki/", 5);
+    }
+
 }
