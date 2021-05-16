@@ -5,7 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.BeforeMethod;
 
-public class Debug {
+public class DebugRunner {
 
     @BeforeMethod
     public void setUp() {
