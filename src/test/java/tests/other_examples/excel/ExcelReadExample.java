@@ -1,4 +1,4 @@
-package tests.excel;
+package tests.other_examples.excel;
 
 import org.testng.annotations.Test;
 import utils.ExcelWorker;
