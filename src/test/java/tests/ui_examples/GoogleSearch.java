@@ -1,8 +1,8 @@
 package tests.ui_examples;
 
 import com.codeborne.selenide.Selenide;
-import data.GoogleSearchData;
-import data.ProjectUrls;
+import data.google.GoogleSearchData;
+import data.google.ProjectUrls;
 import org.testng.annotations.*;
 import pages.google.BasePageGoogle;
 

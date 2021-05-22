@@ -1,4 +1,4 @@
-package data;
+package data.google;
 
 public enum GoogleSearchData {
     GOOGLE_SEARCH_DATA_1("XPath Helper"),

@@ -3,23 +3,57 @@ package utils;
 import io.qameta.allure.Step;
 import logger.CustomLogger;
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ExcelWorker {
 
+    public ArrayList<Object> getDataFromExcel(String excelFilePath) throws IOException {
+        ArrayList<Object> allData = new ArrayList<>();
+        try (FileInputStream inputStream = new FileInputStream(excelFilePath)) {
+            try (Workbook workbook = new HSSFWorkbook(inputStream)) {
+                Sheet sheet = workbook.getSheetAt(0);
+                DataFormatter dataFormatter = new DataFormatter();
+                for (Row row : sheet) {
+                    ArrayList<Object> data = new ArrayList<>();
+                    for (Cell cell : row) {
+                        String cellValue = dataFormatter.formatCellValue(cell);
+                        data.add(cellValue);
+                    }
+                    allData.add(data);
+                }
+            }
+        }
+        return allData;
+    }
+
     @Step
-    public static void writeToExcelFile(String var1, String var2, String var3) throws IOException {
-        String pathToExcel = "src/test/java/data/users/Users.xlsx";
-        try (FileInputStream inputStream = new FileInputStream(pathToExcel)) {
+    public void prepareExcelFile(String excelFilePath, String[] headers) throws IOException {
+        try (HSSFWorkbook workbook = new HSSFWorkbook()) {
+            HSSFSheet sheet = workbook.createSheet("Sheet");
+            HSSFRow rowHead = sheet.createRow((short) 0);
+            for (int i = 0; i < headers.length; i++) {
+                rowHead.createCell(i).setCellValue(headers[i]);
+            }
+            try (FileOutputStream outputStream = new FileOutputStream(excelFilePath)) {
+                workbook.write(outputStream);
+            }
+        }
+    }
+
+    @Step
+    public void writeToExistingExcelFile(String excelFilePath, Object[] allData) {
+        try (FileInputStream inputStream = new FileInputStream(excelFilePath)) {
             try (Workbook workbook = WorkbookFactory.create(inputStream)) {
                 Sheet sheet = workbook.getSheetAt(0);
-                Object[][] dataToWrite = {
-                        {var1, var2, var3},
-                };
+                Object[][] dataToWrite = {allData};
                 int rowCount = sheet.getLastRowNum();
                 for (Object[] data : dataToWrite) {
                     Row row = sheet.createRow(++rowCount);
@@ -36,7 +70,7 @@ public class ExcelWorker {
                     }
                 }
                 inputStream.close();
-                try (FileOutputStream outputStream = new FileOutputStream(pathToExcel)) {
+                try (FileOutputStream outputStream = new FileOutputStream(excelFilePath)) {
                     workbook.write(outputStream);
                     workbook.close();
                 }
@@ -44,7 +78,7 @@ public class ExcelWorker {
         } catch (IOException | EncryptedDocumentException ex) {
             ex.printStackTrace();
         }
-        CustomLogger.logger.info("Name: " + var1 + " - Email: " + var3 + " - ok");
+        CustomLogger.logger.info("ok");
     }
 
 }

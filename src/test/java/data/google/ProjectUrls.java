@@ -1,4 +1,4 @@
-package data;
+package data.google;
 
 public enum ProjectUrls {
     GOOGLE_MAIN_PAGE("https://www.google.com/");
