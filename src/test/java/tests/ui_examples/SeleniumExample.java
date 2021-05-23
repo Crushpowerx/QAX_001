@@ -22,11 +22,11 @@ public class SeleniumExample {
     @BeforeMethod
     public void setUp() {
         if (Platform.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedrivers/chromedriver.exe");
         } else if (Platform.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver_mac");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedrivers/chromedriver_mac");
         } else if (Platform.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedrivers/chromedriver");
         }
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 60);
