@@ -36,8 +36,8 @@ public class SelenoidConfig {
         Configuration.pageLoadStrategy = "eager";
         Configuration.downloadsFolder = "target/build/downloads";
         Configuration.reportsFolder = "target/screenshots";
-        Configuration.pageLoadTimeout = 40000;
-        Configuration.timeout = 40000;
+        Configuration.pageLoadTimeout = 10000;
+        Configuration.timeout = 10000;
         Configuration.browser = "Chrome";
         Configuration.browserVersion = "90";
         Configuration.clickViaJs = true;

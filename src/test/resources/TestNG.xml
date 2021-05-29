@@ -4,7 +4,7 @@
         <listener class-name="listeners.CustomListener"/>
         <listener class-name="listeners.RetryListener"/>
     </listeners>
-    <parameter name="word" value="Hello world!!!"/>
+    <parameter name="word" value="${WORDS}"/>
     <test name="Check google search - DE">
         <parameter name="country" value="DE"/>
         <packages>
