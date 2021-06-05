@@ -13,7 +13,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ExcelWorker {
+public class ExcelHelper {
 
     public ArrayList<Object> getDataFromExcel(String excelFilePath) throws IOException {
         ArrayList<Object> allData = new ArrayList<>();

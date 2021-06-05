@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Iterator;
 
-import static utils.CsvWorker.parseCsvData;
-import static utils.CsvWorker.writeToCSVFile;
+import static utils.CsvHelper.parseCsvData;
+import static utils.CsvHelper.writeToCSVFile;
 
 public class CsvExample {
     String pathToCSV = "src/test/java/data/users/Users.csv";

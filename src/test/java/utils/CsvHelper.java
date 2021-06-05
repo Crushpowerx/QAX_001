@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class CsvWorker {
+public class CsvHelper {
 
     @Step
     public static void writeToCSVFile(String name, String email, String password, boolean append) throws IOException {

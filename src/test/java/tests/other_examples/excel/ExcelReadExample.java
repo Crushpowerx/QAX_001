@@ -1,17 +1,17 @@
 package tests.other_examples.excel;
 
 import org.testng.annotations.Test;
-import utils.ExcelWorker;
+import utils.ExcelHelper;
 
 import java.io.IOException;
 
 public class ExcelReadExample {
-    ExcelWorker excelWorker = new ExcelWorker();
+    ExcelHelper excelHelper = new ExcelHelper();
     String excelFilePath = "src/test/java/data/users/Users.xls";
 
     @Test
     public void readFromExcelExample() throws IOException {
-        System.out.println(excelWorker.getDataFromExcel(excelFilePath));
+        System.out.println(excelHelper.getDataFromExcel(excelFilePath));
     }
 
 }
